@@ -45,8 +45,9 @@ class TestGithubOrgClient(unittest.TestCase):
     @patch('client.get_json')
     def test_public_repos(self, mock_json):
         """
-        Test that the list of repositor, is what you expect from the chosen payload.
-        Test that the mocked property and the mocked get_json if was called once.
+        Test that the list of reposit,is what you expect from payload.
+        Test that the mocked property
+        the mocked get_json if was called once.
         """
         json_payload = [{"name": "Google"}, {"name": "Twitter"}]
         mock_json.return_value = json_payload
@@ -137,4 +138,3 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         A class method called after tests in each class have run
         """
         cls.get_patcher.stop()
-
